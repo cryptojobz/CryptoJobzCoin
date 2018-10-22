@@ -1,0 +1,26 @@
+# /etc/conf.d/cjzcoind: config file for /etc/init.d/cjzcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cjzcoin/cjzcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cjzcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cjzcoind.pid"
+
+# Where to write cjzcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cjzcoind"
+
+# User and group to own cjzcoind process
+#BITCOIND_USER="cjzcoin"
+#BITCOIND_GROUP="cjzcoin"
+
+# Path to cjzcoind executable
+#BITCOIND_BIN="/usr/bin/cjzcoind"
+
+# Nice value to run cjzcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CJZcoin
+Comment=CJZcoin P2P Cryptocurrency
+Comment[fr]=CJZcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=CJZcoin, eşten eşe kriptografik sanal para birimi
+Exec=cjzcoin-qt %u
+Terminal=false
+Type=Application
+Icon=cjzcoin128
+MimeType=x-scheme-handler/cjzcoin;
+Categories=Office;Finance;

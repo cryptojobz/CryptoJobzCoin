@@ -1,0 +1,26 @@
+[Unit]
+Description=CJZcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=cjzcoin
+Group=cjzcoin
+
+Type=forking
+PIDFile=/var/lib/cjzcoind/cjzcoind.pid
+
+ExecStart=/usr/bin/cjzcoind -daemon -pid=/var/lib/cjzcoind/cjzcoind.pid \
+          -conf=/etc/cjzcoin/cjzcoin.conf -datadir=/var/lib/cjzcoind
+
+ExecStop=-/usr/bin/cjzcoin-cli -conf=/etc/cjzcoin/cjzcoin.conf \
+         -datadir=/var/lib/cjzcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
